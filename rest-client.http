@@ -27,3 +27,10 @@ curl http://localhost:8080/albums/2 \
     --request "PUT" \
     --data '{"id": "66","title": "wwwUpdate check","artist": "Betty Carter","price": 49.99}'
 ###
+
+curl http://localhost:8080/albums/26 \
+    --include \
+    --header "Content-Type: application/json" \
+    --request "PUT" \
+    --data '{"id": "66","title": "wwwUpdate check","artist": "Betty Carter","price": 49.99}'
+###
