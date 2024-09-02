@@ -56,19 +56,14 @@ func DeleteAlbum(c *gin.Context) {
 // Update album
 func UpdateAlbum(c *gin.Context) {
 	id := c.Param("id")
-	var newAlbum model.Album
-
-	if err := c.BindJSON(&newAlbum); err != nil {
-		c.IndentedJSON(http.StatusBadRequest, model.Error {Error: "Invalid body"})
-		return
-	}
 	
 	for i, a := range model.Albums {
 		if a.ID == id {
-			model.Albums[i] = newAlbum
-			c.IndentedJSON(http.StatusOK, model.Albums[i])
+			c.BindJSON(&a)
+			model.Albums[i] = a
+			c.IndentedJSON(http.StatusOK, a)
 			return
 		}
 	}
-
+	c.IndentedJSON(http.StatusNotFound, model.Error {"Not found"})
 }
