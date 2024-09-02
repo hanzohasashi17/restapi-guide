@@ -1,4 +1,4 @@
-module github.com/hanzohasashi17/restfull-api-with-guide
+module github.com/hanzohasashi17/restapi-guide
 
 go 1.23.0
 

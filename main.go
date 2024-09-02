@@ -1,9 +1,8 @@
 package main
 
 import (
-
 	"github.com/gin-gonic/gin"
-	"github.com/hanzohasashi17/restfull-api-with-guide/handler"
+	"github.com/hanzohasashi17/restapi-guide/handler"
 )
 
 func main() {

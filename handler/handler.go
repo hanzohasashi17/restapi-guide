@@ -4,7 +4,7 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/hanzohasashi17/restfull-api-with-guide/model"
+	"github.com/hanzohasashi17/restapi-guide/model"
 )
 
 // Get all albums
